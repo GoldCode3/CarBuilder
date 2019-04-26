@@ -1,0 +1,63 @@
+import java.util.Scanner;
+/**
+ * This is my first project working with classes and objects!
+ * 
+ * This class is the "factory" to build the car.
+ * 
+ * @author Rahul Joseph
+ * @version Version 1.0 4/12/19
+ */
+
+public class Builder
+{
+    public static void main(String[] args)
+    {
+        //Creating a new object of class Car
+        Car c1 = new Car();
+        //Creating a new Scanner object to get user input
+        Scanner sc = new Scanner(System.in);
+        //Introduction for the user to understand the program
+        System.out.println("Hi! Welcome to the Code Car Dealership! We have the " + 
+        "greatest selection of car features in the world so that you can build the " + 
+        "car of your DREAMS!");
+        System.out.println("If you are ready to start the car bulding experience " + 
+        "please enter Begin");
+        //Taking user's input to begin or not
+        String begin = sc.nextLine();
+        //Creating an emtpy string to store the user's input into later
+        String extColor = "";
+        //Making the user's input uppercase so that the input is not case sensitive
+        String cBegin = begin.toUpperCase();
+        if (cBegin.equals("BEGIN"))
+        {
+            System.out.println("Let's start with the exterior color");
+            System.out.println("Please enter the color you would like your car to be");
+            extColor = sc.nextLine();
+        }
+        else
+        {
+            System.out.println("Thank you for stopping by the Code Car Dealership");
+            System.out.println("Please enjoy the rest of your day!");
+            //Using System.exit(1) in order to end the program in the case that the user doesn't enter "Begin"
+            System.exit(1);
+        }
+        //Setting the exterior color to the user's choice
+        c1.setextColor(extColor);
+        System.out.println("Please enter the color you would like the interior to be");
+        //Setting the interior color to the user's choice
+        c1.setintColor(sc.nextLine());
+        System.out.println("What material would you like the interior to be made of?");
+        String intMaterial = sc.nextLine();
+        //Setting the interior material to the user's choice
+        c1.setintMaterial(intMaterial);
+        System.out.println("What color would you like the wheels to be?");
+        String wheelColor = sc.nextLine();
+        //Setting the wheel color to the user's choice
+        c1.setwheelColor(wheelColor);
+        System.out.println("How many doors would you like there to be?");
+        int doors = sc.nextInt();
+        //Setting the number of doors to the user's choice
+        c1.setDoors(doors);
+        System.out.println(c1.toString());
+    }
+}
