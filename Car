@@ -1,0 +1,74 @@
+
+/**
+ * This class is to specify the features to build your car
+ *
+ * @author Rahul Joseph
+ * @version Version 1.0 4/12/19
+ */
+public class Car
+{
+    private String extColor;
+    private String intColor;
+    private String wheelColor;
+    private int doors;
+    private String intMaterial;
+    
+    public String getextColor()
+    {
+        return extColor;
+    }
+    
+    public String getintColor()
+    {
+        return intColor;
+    }
+    
+    public String getwheelColor()
+    {
+        return wheelColor;
+    }
+    
+    public int getDoors()
+    {
+        return doors;
+    }
+    
+    public String getintMaterial()
+    {
+        return intMaterial;
+    }
+    
+    public void setextColor(String extColor)
+    {
+        this.extColor = extColor;
+    }
+    
+    public void setintColor(String intColor)
+    {
+        this.intColor = intColor;
+    }
+    
+    public void setwheelColor(String wheelColor)
+    {
+        this.wheelColor = wheelColor;
+    }
+    
+    public void setDoors(int doors)
+    {
+        this.doors = doors;
+    }
+    
+    public void setintMaterial(String intMaterial)
+    {
+        this.intMaterial = intMaterial;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return ("Congradulations on your purchase of your DREAM CAR! Here are the specifications " + 
+        "of your car:" + "\nExterior Color: " + this.getextColor() + "\nInterior Color: " 
+        + this.getintColor() + "\nInterior Material: " + this.getintMaterial() + "\nWheel Color: " + 
+        this.getwheelColor() + "\nNumber of Doors: " + this.getDoors());
+    }
+}
